@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        iframe {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <header>
+        <div class="header-links">
+            <div class="logo-img">
+                <a href="#" onclick="relod()" class="logo">Rawat</a>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <!-- <li class="nav-item " id="india" onclick="onNavClick('india')">All</li> -->
+                    <li class="nav-item" id="cricket" onclick="onNavClick('cricket')">Cricket</li>
+                    <li class="nav-item" id="tech" onclick="onNavClick('tech')">Tech</li>
+                    <li class="nav-item" id="finance" onclick="onNavClick('finance')">Finanace</li>
+                </ul>
+            </div>
+            <div class="profile"></div>
+        </div>
+    </header>
+
+    <div class="main">
+
+    </div>
+    <div class="main-content">
+        <div class="left-section">
+            <div class="side">
+                <div class="head-nav-links">
+                    <h2>India</h2>
+                    <div class="head-links">
+                        <input type="text" name="search"class="news-input" placeholder="e.g. ipl" id="search-text">
+                        <button class="search" id="search-btn">Search</button>
+                        <select name="sort" id="sort">sort
+                            <option value="latest">latest</option>
+                            <option value="date">date</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="cards" id="cards-container">
+                <div class="news-section">
+                    <div class="news-card-header">
+                        <img src="./img.jpg" alt="image" id="news-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text" id="news-title">Here is the title </h3>
+                        <h5 class="text" id="news-src">date and source</h5> 
+                        
+                        <p class="news-desc text" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, qui.
+                            eos, nihil voluptatibus voluptatem fugit.</p>
+                            <button id="more">Know More</button>
+                    </div>
+        
+                </div>
+            </div>
+            
+        </div>
+        <div class="headline-section">
+            <h2>🔥 Headlines</h2>
+            <iframe class="side-links" src="./headlines.html"  width="400">
+
+            </iframe>
+
+        </div>
+    </div>
+    <template id="template-news-card">
+        <div class="news-section">
+            <div class="news-card-header">
+                <img src="./img.jpg" alt="image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 class="text" id="news-title">Here is the title </h3>
+                <h5 class="text" id="news-src">date and source</h5> 
+                
+                <p class="news-desc text" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, qui.
+                    eos, nihil voluptatibus voluptatem fugit.</p>
+                    <button id="more">Know More</button>
+            </div>
+
+        </div>
+    </template>
+    <footer>
+
+    </footer>
+</body>
+<script src="./info.js"></script>
+<script src="./app.js"></script>
+
+</html>

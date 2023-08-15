@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headlines</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .card-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-bottom: 1px solid darkblue;
+        background: linear-gradient(to left , #cfffe9,rgb(241, 255, 246));
+        /* background-color: rgb(244, 255, 248); */
+        padding-bottom: 10px;
+        /* border-radius: 15px; */
+    }
+    .card-container .card-img img{
+        height: 80px;
+        margin-top: 5px;
+        border-radius: 15px;
+    }
+    .news-title {
+        margin-left: 5px;
+        margin-top: 5px;
+        font-size: 18px;
+        font-weight: 800;
+    }
+    .news-src{
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .nav-item.active {
+        background-color: #44d18f;
+    }
+    .nav-bar {
+        margin: 8px 0 8px 8px;
+    }
+    .nav-bar ul li {
+        list-style: none;
+        border-radius: 10px;
+        border: 1px solid lightgreen;
+        padding: 4px 10px;
+        cursor: pointer;
+    }
+    .nav-bar ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        overflow-x: auto;
+    }
+    .nav-bar ul li:hover {
+        background-color: #71e8b0;
+        color: white;
+    }
+    ::-webkit-scrollbar {
+        display:none;
+    }
+ 
+</style>
+<body>
+
+    <section class="nav-bar">
+        <ul>
+            <li class="nav-item" id="movies" onclick="clickedItem('movies')">Movies</li>
+            <li class="nav-item" id="sports" onclick="clickedItem('sports')">Sports</li>
+            <li class="nav-item" id="edutech" onclick="clickedItem('edutech')">EduTech</li>
+            <li class="nav-item" id="fintech" onclick="clickedItem('fintech')">Fintech</li>
+            <li class="nav-item" id="travel" onclick="clickedItem('travel')">Travel</li>
+            <!-- <li class="nav-item" id="health" onclick="clickedItem('health')">Health</li> -->
+        </ul>
+    </section>
+    <hr>
+    <section class="news" id="news">
+        <div class="cards" id="cards">
+            <div class="card-container" >
+                <div class="news-data">
+                    <div class="news-title" id="news-title">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quasi. </p>
+                    </div>
+                    <div class="news-src" id="news-src">
+                        <h5 class="src">Times Now </h5>
+                    </div>
+                </div>
+                <div class="card-img">
+                    <img src="./img2.jpg" alt="image" id="news-img">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <template id="card-container">
+        <div class="card-container" >
+            <div class="news-data">
+                <div class="news-title" id="news-title">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quasi. </p>
+                </div>
+                <div class="news-src" id="news-src">
+                    <h5>Times Now </h5>
+                </div>
+            </div>
+            <div class="card-img">
+                <img src="./img2.jpg" alt="image" id="news-img">
+            </div>
+        </div>
+    </template>
+
+</body>
+<script src="./info.js"></script>
+<script src="./script.js"></script>
+</html>
